@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "body-scroll-lock": "^3.1.5",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-js-modal": "^2.0.0-rc.6",

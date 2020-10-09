@@ -1,7 +1,7 @@
 <template>
   <div class="modal__wrapper">
     <div class="overlay"></div>
-    <div class="modal">
+    <div class="modal" ref="modal">
       <slot></slot>
       <div class="btn__wrapper">
         <Button :event="closeModal" text="Ok"/>
@@ -11,11 +11,18 @@
 </template>
 
 <script>
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import Button from "@/components/Button";
 export default {
   components: {Button},
   props: {
     closeModal: Function
+  },
+  mounted() {
+      disableBodyScroll(this.$refs.modal);
+  },
+  beforeDestroy() {
+    enableBodyScroll(this.$refs.modal);
   }
 }
 </script>

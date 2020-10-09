@@ -1,7 +1,7 @@
 <template>
   <div class="contact__form">
     <transition name="fade">
-      <Modal :closeModal="closeModal" v-if="isModalVisible">
+      <Modal :closeModal="closeModal" v-if="isModalVisible" ref="modal">
         <p>Thanks{{this.name ? ' ' + this.name : ''}}, your message has been sent.</p>
       </Modal>
     </transition>
