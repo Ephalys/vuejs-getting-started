@@ -22,7 +22,6 @@ export default {
       disableBodyScroll(this.$refs.modal);
   },
   beforeDestroy() {
-    console.log('before destroy' + this.$refs.modal);
     enableBodyScroll(this.$refs.modal);
   }
 }
