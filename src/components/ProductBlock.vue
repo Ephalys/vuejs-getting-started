@@ -17,7 +17,7 @@ import Emoji from "@/components/Emoji";
 export default {
   components: {Emoji},
   props: {
-    productData: Array
+    productData: Object
   }
 }
 </script>

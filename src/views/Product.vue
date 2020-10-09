@@ -14,13 +14,12 @@ export default {
   components: {ProductBlock, ProductList, Emoji},
   data() {
     return {
-      productData: []
+      productData: {}
     }
   },
   created() {
     this.getProduct(this.$route.params.id)
         .then(data => this.productData = data)
-        .then(() => console.log(this.productData))
         .catch(err => console.log(err))
   },
   mixins: [products]
