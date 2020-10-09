@@ -99,6 +99,7 @@ export default {
 }
 .contact__form {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
 
   .errors__wrapper {
@@ -109,10 +110,19 @@ export default {
     width: 50%;
     padding-right: 30px;
     text-align: left;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+    }
   }
   form {
     width: 50%;
     padding-left: 30px;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+    }
 
     .form-group {
       display: flex;
