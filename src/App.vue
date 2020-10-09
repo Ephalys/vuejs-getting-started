@@ -28,6 +28,9 @@ body, html {
     padding: 30px;
   }
 }
+p {
+  margin: 0;
+}
 </style>
 <script>
 import Header from "@/components/Header";
