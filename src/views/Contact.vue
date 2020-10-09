@@ -1,12 +1,18 @@
 <template>
-  <div class="more">
-    <Emoji altcode="💀"/>
-    <h1>This is a more page</h1>
+  <div class="contact">
+    <Emoji altcode="🙋🏻‍♂️"/>
+    <ContactForm/>
   </div>
 </template>
 <script>
 import Emoji from "@/components/Emoji";
+import ContactForm from "@/components/ContactForm";
 export default {
-  components: {Emoji}
+  components: {ContactForm, Emoji}
 }
 </script>
+<style scoped lang="scss">
+.contact {
+
+}
+</style>
