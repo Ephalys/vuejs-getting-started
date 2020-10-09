@@ -4,7 +4,7 @@
     <div class="modal" ref="modal">
       <slot></slot>
       <div class="btn__wrapper">
-        <Button :event="closeModal" text="Ok"/>
+        <Button :event="closeModal" text="Ok" type="button"/>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
       disableBodyScroll(this.$refs.modal);
   },
   beforeDestroy() {
+    console.log('before destroy' + this.$refs.modal);
     enableBodyScroll(this.$refs.modal);
   }
 }

@@ -1,5 +1,9 @@
 <template>
-  <button type="submit" class="btn btn-submit" @click="event">{{ text }}</button>
+  <button :type="type"
+          class="btn btn-submit"
+          v-on="event ? { click: event } : {}">
+    {{ text }}
+  </button>
 </template>
 
 <script>
@@ -7,7 +11,11 @@ export default {
   name: 'Button',
   props: {
     text: String,
-    event: Function
+    event: Function,
+    type: String
+  },
+  mounted() {
+    console.log(this.event)
   }
 }
 </script>
