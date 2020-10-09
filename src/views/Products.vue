@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="products">
     <Emoji altcode="💸"/>
     <h1>Check all products</h1>
     <ProductList :products="this.productsList"/>

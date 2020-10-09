@@ -1,10 +1,10 @@
 <template>
   <div class="products__list">
-    <div v-for="product in products" :key="product.id" class="product__item">
+    <router-link :to="/product/ + product.id" v-for="product in products" :key="product.id" class="product__item">
       <img :src="product.image" :alt="product.title">
       <p class="product__item-title">{{product.title}}</p>
       <p class="product__item-price">{{product.price}}€</p>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -31,6 +31,8 @@ export default {
   margin-bottom: 30px;
   overflow: hidden;
   text-align: left;
+  color: #2c3e50;
+  text-decoration: none;
 
   img {
     max-height: 200px;
@@ -40,6 +42,10 @@ export default {
 
   &-title {
     font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &-price {
+    font-size: 14px;
   }
 }
 </style>

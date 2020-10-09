@@ -30,6 +30,8 @@ body, html {
 }
 p {
   margin: 0;
+  font-size: 16px;
+  line-height: 26px;
 }
 </style>
 <script>
