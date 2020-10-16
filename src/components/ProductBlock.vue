@@ -9,16 +9,20 @@
 
       <p class="product-label">Description</p>
       <p class="product-description">{{productData.description}}</p>
+      <Button text="Add to cart" :event="() => addToCart(productData)"/>
     </div>
   </div>
 </template>
 <script>
 import Emoji from "@/components/Emoji";
+import Button from "@/components/Button";
+import cart from "@/mixins/cart";
 export default {
-  components: {Emoji},
+  components: {Button, Emoji},
   props: {
     productData: Object
-  }
+  },
+  mixins: [cart]
 }
 </script>
 
@@ -50,5 +54,9 @@ export default {
       }
     }
   }
+}
+
+::v-deep .btn {
+  margin-top: 30px;
 }
 </style>
